@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/gitHubListFragment"
+    android:id="@+id/nav_graph">
+
+
+    <fragment
+        android:id="@+id/gitHubListFragment"
+        android:name="com.sadapay.assessment.presentation.fragments.GitHubListFragment"
+        android:label="GitHub List"
+        tools:layout="@layout/fragment_git_hub_list" />
+
+
+</navigation>

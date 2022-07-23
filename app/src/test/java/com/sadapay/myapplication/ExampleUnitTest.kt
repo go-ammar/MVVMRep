@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.sadapay.myapplication
 
 import org.junit.Test
 

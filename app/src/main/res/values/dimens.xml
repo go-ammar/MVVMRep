@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_18">@dimen/_18ssp</dimen>
+    <dimen name="text_size_12">@dimen/_12ssp</dimen>
+    <dimen name="text_size_14">@dimen/_14ssp</dimen>
+    <dimen name="size_text_heading_16">@dimen/_16ssp</dimen>
+
+    <dimen name="margin_horizontal_15">@dimen/_15sdp</dimen>
+    <dimen name="margin_top_button_40">@dimen/_40sdp</dimen>
+    <dimen name="margin_top_text_10">@dimen/_10sdp</dimen>
+    <dimen name="margin_bottom_text_16">@dimen/_16sdp</dimen>
+    <dimen name="margin_left_text_4">@dimen/_4sdp</dimen>
+    <dimen name="margin_left_text_12">@dimen/_12sdp</dimen>
+    <dimen name="margin_bottom_text_8">@dimen/_8sdp</dimen>
+
+    <dimen name="padding_drawable">@dimen/_4sdp</dimen>
+    <dimen name="margin_top_text_5">@dimen/_5sdp</dimen>
+    <dimen name="radius_avatar">@dimen/_20sdp</dimen>
+    <dimen name="size_avatar">@dimen/_40sdp</dimen>
+
+</resources>
