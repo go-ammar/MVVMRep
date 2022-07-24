@@ -2,7 +2,7 @@ package com.sadapay.assessment.repository
 
 import androidx.lifecycle.LiveData
 import androidx.paging.PagingData
-import com.sadapay.assessment.models.Items
+import com.sadapay.assessment.data.models.Items
 
 interface GitHubRepoRepository {
 

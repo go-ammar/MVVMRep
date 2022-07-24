@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="text_size_18">@dimen/_18ssp</dimen>
-    <dimen name="text_size_12">@dimen/_12ssp</dimen>
-    <dimen name="text_size_14">@dimen/_14ssp</dimen>
-    <dimen name="size_text_heading_16">@dimen/_16ssp</dimen>
+    <dimen name="text_size_18">@dimen/_16ssp</dimen>
+    <dimen name="text_size_12">@dimen/_10ssp</dimen>
+    <dimen name="text_size_14">@dimen/_12ssp</dimen>
+    <dimen name="size_text_heading_16">@dimen/_14ssp</dimen>
 
     <dimen name="margin_horizontal_15">@dimen/_15sdp</dimen>
     <dimen name="margin_top_button_40">@dimen/_40sdp</dimen>

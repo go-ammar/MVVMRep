@@ -7,4 +7,6 @@
     <string name="error">Something went wrong..</string>
     <string name="error_description">An alien is probably blocking your signal.</string>
     <string name="retry">Retry</string>
+    <string name="loading_error">Sorry we couldn\'t load the data. Please try again.</string>
+    <string name="github_repo_image">Github Repo Image</string>
 </resources>

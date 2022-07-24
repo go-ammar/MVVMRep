@@ -36,7 +36,8 @@
                     android:id="@+id/image"
                     android:layout_width="@dimen/size_avatar"
                     android:layout_height="@dimen/size_avatar"
-                    android:src="@drawable/ic_star" />
+                    android:src="@drawable/ic_star"
+                    android:contentDescription="@string/github_repo_image" />
 
             </androidx.cardview.widget.CardView>
 
@@ -57,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
                     android:singleLine="true"
-                    android:text="name"
+                    tools:text="name"
                     android:textSize="@dimen/text_size_12" />
 
 
@@ -73,23 +74,27 @@
                     android:textStyle="bold"
                     tools:text="heading" />
 
-                <LinearLayout
-                    android:id="@+id/layoutDesc"
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
+                    android:id="@+id/layoutDesc"
+                    android:visibility="gone"
+                    >
 
                     <TextView
                         android:id="@+id/desc"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/size_text_heading_16"
-                        android:layout_marginBottom="@dimen/size_text_heading_16"
-                        android:singleLine="true"
+                        android:singleLine="false"
+                        card_view:layout_constraintTop_toTopOf="parent"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
                         android:textSize="@dimen/text_size_14"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent"
                         tools:text="description" />
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <LinearLayout
                     android:id="@+id/layoutOther"
@@ -104,27 +109,27 @@
                         android:id="@+id/lang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_star"
                         android:drawablePadding="@dimen/padding_drawable"
-                        android:drawableTint="@color/navy_blue"
                         android:fontFamily="sans-serif"
                         android:gravity="center"
-                        android:text="lang"
-                        android:textSize="12sp" />
+                        tools:text="lang"
+                        android:textSize="12sp"
+                        card_view:drawableTint="@color/navy_blue"
+                        card_view:drawableLeftCompat="@drawable/ic_circle" />
 
                     <TextView
                         android:id="@+id/star"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_left_text_12"
+                        android:layout_marginStart="@dimen/margin_left_text_12"
 
-                        android:drawableLeft="@drawable/ic_star"
                         android:drawablePadding="@dimen/margin_left_text_4"
-                        android:drawableTint="@color/orange"
                         android:fontFamily="sans-serif"
                         android:gravity="center"
-                        android:text="stars"
-                        android:textSize="@dimen/text_size_12" />
+                        tools:text="stars"
+                        android:textSize="@dimen/text_size_12"
+                        card_view:drawableLeftCompat="@drawable/ic_star"
+                        card_view:drawableTint="@color/orange" />
 
                 </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.sadapay.assessment.models
+package com.sadapay.assessment.data.models
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -38,6 +38,7 @@ data class Items(
     @SerializedName("owner")
     val owner: Owner,
 
+    var isExpanded : Boolean = false
     ) : Parcelable
 
 @Parcelize

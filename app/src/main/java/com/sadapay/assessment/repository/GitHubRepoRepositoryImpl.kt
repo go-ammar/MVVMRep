@@ -5,7 +5,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.liveData
-import com.sadapay.assessment.models.Items
+import com.sadapay.assessment.data.models.Items
 import com.sadapay.assessment.network.RetrofitService
 import com.sadapay.assessment.network.pagingsource.GithubTrendingPagingSource
 import javax.inject.Inject

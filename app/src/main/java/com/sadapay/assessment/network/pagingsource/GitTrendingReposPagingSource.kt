@@ -2,7 +2,7 @@ package com.sadapay.assessment.network.pagingsource
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.sadapay.assessment.models.Items
+import com.sadapay.assessment.data.models.Items
 import com.sadapay.assessment.network.RetrofitService
 import retrofit2.HttpException
 import java.io.IOException

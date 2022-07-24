@@ -1,6 +1,6 @@
 package com.sadapay.assessment.network
 
-import com.sadapay.assessment.models.GitTrendingReposResponse
+import com.sadapay.assessment.data.models.GitTrendingReposResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
