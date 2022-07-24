@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Github Repos</string>
+
     <string name="light_mode">Light mode</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="error">Something went wrong..</string>
@@ -9,4 +8,5 @@
     <string name="retry">Retry</string>
     <string name="loading_error">Sorry we couldn\'t load the data. Please try again.</string>
     <string name="github_repo_image">Github Repo Image</string>
+
 </resources>

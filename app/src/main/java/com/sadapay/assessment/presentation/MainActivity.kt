@@ -1,37 +1,29 @@
 package com.sadapay.assessment.presentation
 
-import android.app.UiModeManager
-import android.content.Context
-import android.os.Build
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.lifecycle.lifecycleScope
 import com.sadapay.R
-import com.sadapay.assessment.data.PrefsManager
+import com.sadapay.assessment.di.AppModule.KEY_PREF_THEME
 import com.sadapay.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    @set:Inject
+    internal var sharedPreferences: SharedPreferences? = null
 
-    @Inject
-    lateinit var preferenceStorage: PrefsManager
-    private var isDarkMode : Boolean = false
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setViews()
     }
 
@@ -40,22 +32,10 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-
-        lifecycleScope.launch {
-            val isDarkMode = preferenceStorage.getDarkMode()
-
-            AppCompatDelegate.setDefaultNightMode(
-                if (isDarkMode)
-                    AppCompatDelegate.MODE_NIGHT_YES
-                else
-                    AppCompatDelegate.MODE_NIGHT_NO
-            )
-
-//            if (isDarkMode) {
-//                setTheme(R.style.AppThemeLight)
-//            } else {
-//                setTheme(R.style.AppThemeDark)
-//            }
+        if (sharedPreferences?.getBoolean(KEY_PREF_THEME, false) == true) {
+            setTheme(R.style.AppThemeDark)
+        } else {
+            setTheme(R.style.AppThemeLight)
 
         }
     }
@@ -69,23 +49,27 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu_light -> {
-                if (isDarkMode){
-                    lifecycleScope.launch {
-                        preferenceStorage.setDarkMode(isDarkMode = false)
-                    }
+                if (sharedPreferences?.getBoolean(KEY_PREF_THEME, false) == true) {
+
+                    sharedPreferences?.edit()
+                        ?.putBoolean(
+                            KEY_PREF_THEME,
+                            false
+                        )?.apply()
 
                     recreate()
                 }
-
                 true
             }
 
             R.id.menu_dark -> {
 
-                if (!isDarkMode){
-                    lifecycleScope.launch {
-                        preferenceStorage.setDarkMode(isDarkMode = true)
-                    }
+                if (sharedPreferences?.getBoolean(KEY_PREF_THEME, false) == false) {
+                    sharedPreferences?.edit()
+                        ?.putBoolean(
+                            KEY_PREF_THEME,
+                            true
+                        )?.apply()
                     recreate()
                 }
 
